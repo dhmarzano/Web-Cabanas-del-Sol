@@ -1,0 +1,499 @@
+/* global **********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+/* cabecera **********************************************/
+header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  background: #ffffffb8;
+  z-index: 999;
+  box-shadow: 0 0 4px rgb(173, 167, 167);
+}
+/* logo **********************************************/
+#header-img {
+  max-width: 170px;
+}
+/* barra de navegación **********************************************/
+.nav-link,
+.nav-social {
+  display: inline-flex;
+}
+.nav-link li {
+  margin: 0 10px;
+}
+.nav-link li a {
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  font-weight: 700;
+  font-size: 1.1vw;
+}
+.nav-link li:hover a {
+  color: #70a506;
+  cursor: pointer;
+}
+/* link sociales */
+.nav-social ul {
+  padding: 0 10px;
+}
+.nav-social a {
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-social span {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  border: 1px solid #1c3c55;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.7s ease;
+}
+.nav-social span:hover {
+  background: #283618;
+  color: #fff;
+}
+/* banner **********************************************/
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.info {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  flex: 0 0 50%;
+  max-width: 50%;
+  z-index: 1;
+}
+.info h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 4px 4px rgb(5 5 5 / 73%);
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8vw;
+}
+.info p {
+  line-height: 1.5;
+  text-align: left;
+  text-align: justify;
+  font-size: 1.2vw;
+}
+.video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 50%;
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+/* info cabañas **********************************************/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 4em 1em 1em;
+}
+.row-title {
+  width: 100%;
+  padding: 20px 20px 10px;
+  border-bottom: 1px dotted #ccc;
+  font-size: 1.6vw;
+  text-transform: uppercase;
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 10px;
+  border-radius: 0.25rem;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.lista-item {
+  position: relative;
+  display: block;
+  padding: 0.75rem 2.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  font-size: 0.8rem;
+}
+/* imagenes **********************************************/
+.grid {
+  padding: 1em;
+}
+.grid-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5em;
+}
+.item {
+  flex: 1 1 25%;
+  padding: 0.5em;
+}
+.item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas2.jpg);
+  padding-top: calc(100% / 1.78);
+}
+.item:nth-child(2) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas.jpg);
+}
+.item:nth-child(3) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas3.jpg);
+}
+.item:nth-child(4) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas4.jpg);
+}
+.item:nth-child(5) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas5.jpg);
+}
+.item:nth-child(6) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas6.jpg);
+}
+.item:nth-child(7) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas7.jpg);
+}
+.item:nth-child(8) .item-inner {
+  background-size: cover;
+  background-image: url(../img/Cabañas8.jpg);
+}
+.item-inner:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* imagen modal **********************************************/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 50%;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* información de contacto **********************************************/
+.contacto {
+  padding: 4em 1em 1em;
+}
+.contacto-title {
+  width: 100%;
+  padding: 20px 20px 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.contacto-title span {
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+}
+.contacto h2 {
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.85vw;
+}
+/* tarifas **********************************************/
+#tarifas,
+#form {
+  background-color: #f8f9fa;
+}
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 4em 1em 1em;
+  max-width: 100%;
+}
+.table-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: calc(33.33% - 1px);
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style-type: none;
+  outline: 1px solid #ddd;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+.baja {
+  padding-top: 20px 0;
+  color: limegreen;
+}
+.alta {
+  padding-top: 20px 0;
+  background-color: #30305b;
+  color: #85bafc;
+}
+.table-cell:first-child {
+  padding-top: 20px 0;
+  outline: 1px solid #fff;
+  background: transparent;
+}
+.table-cell.cell-feature {
+  text-align: left;
+  color: rgb(112, 134, 156);
+}
+/* medios de pago **********************************************/
+.table-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4em 1em 1em;
+  width: 100%;
+}
+.table-img div img {
+  width: 80%;
+  height: auto;
+}
+/* formulario de contacto **********************************************/
+#form {
+  padding: 4em 6em;
+}
+#form h4 {
+  margin: 20px 0;
+  padding: 0;
+  font-family: "calibri";
+  color: #5e5e5e;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #918e8e;
+  font-weight: 700;
+  width: 100%;
+}
+#form h6 {
+  margin-top: 10px;
+  font-family: "Calibri";
+  color: #5e5e5e;
+  line-height: 19px;
+  font-size: 16px;
+  font-weight: 400;
+}
+#form table {
+  margin-top: 20px;
+  width: 50%;
+}
+#form table tr td {
+  padding: 0.5em 0;
+  font-size: 0.875em;
+}
+#form table tr td input {
+  border: 1px solid #ccc;
+  background-color: #f6f7f0;
+  outline: none;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+}
+#form table tr td textarea {
+  border: 1px solid #ccc;
+  background-color: #f6f7f0;
+  outline: none;
+  line-height: 19px;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  resize: vertical;
+}
+.button {
+  font-size: 1em;
+  color: black;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  text-emphasis: center;
+}
+.button:hover {
+  background-color: #70a506;
+  font-weight: 700;
+  cursor: pointer;
+}
+.form-consultas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 50%;
+}
+.form-consultas h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.form-consultas p {
+  line-height: 25px;
+}
+/* pie de pagina **********************************************/
+.pie {
+  background-color: #465534;
+  padding: 18px 20px;
+  text-align: right;
+  font-size: 0.7em;
+}
+/* MEDIA QUERYS ************************************/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .form-consultas,
+  #form table {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .form-consultas,
+  #form table {
+    width: 100%;
+  }
+  .info p {
+    font-size: 1.5vw;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .form-consultas,
+  #form table {
+    width: 100%;
+  }
+  .info p {
+    font-size: 1.8vw;
+  }
+  .info {
+    margin-top: 47px;
+  }
+  #form {
+    padding: 3em 4em;
+  }
+  .info,
+  .video {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #header-img {
+    max-width: 120px;
+  }
+  #header {
+    margin-top: 0;
+  }
+  .nav-link li {
+    margin: 0 5px;
+  }
+  .nav-link li a {
+    font-size: 1.4vw;
+  }
+}
+
+@media (max-width: 575px) {
+  .form-consultas,
+  #form table {
+    width: 100%;
+  }
+  .info p,
+  .contacto h2,
+  .form-consultas p {
+    font-size: 2vw;
+  }
+  .info h2,
+  .row-title,
+  .table-cell {
+    font-size: 3vw;
+  }
+  .info {
+    margin-top: 47px;
+  }
+  #form {
+    padding: 1.5em 2em;
+  }
+  .info,
+  .video {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  #header-img {
+    max-width: 120px;
+  }
+  #header {
+    margin-top: 0;
+  }
+  .nav-link {
+    display: none;
+  }
+  .row {
+    padding: 2em 1em 1em;
+  }
+}

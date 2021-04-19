@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--CABECERA-->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Diego M." />
+  <meta name="description" content="Cabañas, San clemente del tuyu, alojamiento" />
+  <meta name="keywords" content="San Clemente del Tuyu, cabañas, alojamiento" />
+  <!--CSS-->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;700&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1ff822fb76.js" crossorigin="anonymous"></script>
+  <!--Titulo-->
+  <title>HTML + CSS + Responsive + JS: Playa del Sol Resort</title>
+</head>
+
+</html>
+
+<body>
+  <!-- consigna 1 -->
+  <header id="header">
+    <!-- consigna 2 -->
+    <a href="#"><img id="header-img" src="../img/logo.png" alt="Playa del Sol Resort"
+        title="Cabañas Playa del Sol Resort - San Clemente del Tuyu, Argentina" /></a>
+    <!-- consigna 3 -->
+    <nav id="nav-bar">
+      <!-- consigna 4 -->
+      <ul class="nav-link" href="#header">
+        <li><a class="nav-link" href="#header">Home</li></a>
+        <li><a class="nav-link" href="#cabañas">Cabañas</li></a>
+        <li><a class="nav-link" href="#tarifas">Tarifas</li></a>
+        <li><a class="nav-link" href="#ubicacion">Ubicación</li></a>
+        <li><a class="nav-link" href="#form">Contacto</li></a>
+      </ul>
+    </nav>
+    <div class="nav-social">
+      <ul><a href="https://www.facebook.com/CABA%C3%91AS-PLAYADELSOL-San-Clemente-del-Tuyuarg-131177106920798/"
+          target="_blank" rel="nofollow">
+          <span><i class="fab fa-facebook" aria-hidden="true"></i></span></a>
+      </ul>
+      <ul>
+        <a href="https://www.instagram.com/playadelsol_sanclemente/" target="_blank" rel="nofollow">
+          <span> <i class="fab fa-instagram" aria-hidden="true"></i></span></a>
+      </ul>
+      <ul>
+        <a href="https://wa.me/542257588700?text=Hola%20Quiero%20info%20de%20EntreVerdes" target="_blank"
+          rel="nofollow">
+          <span><i class="fab fa-whatsapp" aria-hidden="true"></i></span></a>
+      </ul>
+    </div>
+  </header>
+
+  <!-- información central -->
+  <div class="banner">
+    <img src="/img/banner.jpg" alt="Imagen playa de fondo">
+    <!-- info general -->
+    <div class="info">
+      <h2>Vivi San Clemente del Tuyu todo el año</h2>
+      <p class="info-texto"><strong>Cabañas del Sol Resort</strong> es un complejo vacacional conformado por un
+        conjunto de cabañas de <strong>troncos y piedras.</strong> Muy cálidos, ubicados en pleno
+        <strong>centro</strong> de la ciudad,
+        a solo cien metros de la <strong>peatonal</strong> y a doscientos metros del <strong>mar.</strong>
+        <br><br>
+        Todas las cabañas están equipadas con muebles estilo rústico (tipo bariloche), con madera de ciprés. Amplios
+        ventanales
+        con balcones y una vista a la plaza principal de la ciudad.
+      </p>
+    </div>
+    <!--consigna 5 -->
+    <div class="video">
+      <iframe id="video" width="460" height="215" src="https://www.youtube.com/embed/W4ZKZuRLQB0?controls=0"
+        title="Video San Clemente del TuYU" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- cabañas -->
+  <div id="cabañas" class="row">
+    <h4 class="row-title"> Nuestas cabañas cuentan con los siguientes servicios y comodidades:</h4>
+    <ul class="lista">
+      <li class="lista-item">Internet WI-FI</li>
+      <li class="lista-item">TV por Cable </li>
+      <li class="lista-item">Smart TV</li>
+      <li class="lista-item">Cocina completa</li>
+    </ul>
+    <ul class="lista">
+      <li class="lista-item">Horno microondas</li>
+      <li class="lista-item">Heladera con freezer</li>
+      <li class="lista-item">Parrilla</li>
+      <li class="lista-item">Estacionamiento individual</li>
+    </ul>
+  </div>
+
+  <!-- galeria de imagenes -->
+  <div class="grid">
+    <div class="grid-inner">
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+      <div class="item">
+        <div class="item-inner"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- imagen modal -->
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="imgFull">
+  </div>
+
+  <!-- tarifas -->
+  <div id="tarifas" class="contacto">
+    <h4 class="contacto-title"><span>Tarifas vigentes</span></h4>
+    <h2>Vigente desde el mes de Marzo 2021 . ( Consultar Fin de semana largo).</h2>
+    <div class="table">
+      <div class="table-cell"></div>
+      <div class="table-cell baja">
+        <h4>Temporada Baja</h4>
+      </div>
+      <div class="table-cell alta">
+        <h4>Temporada Alta</h4>
+      </div>
+      <div class="table-cell cell-feature">2 Personas <i class="fas fa-hand-point-right"></i> </div>
+      <div class="table-cell">--</div>
+      <div class="table-cell">--</div>
+      <div class="table-cell cell-feature">3 Personas <i class="fas fa-hand-point-right"></i></div>
+      <div class="table-cell">--</div>
+      <div class="table-cell">--</div>
+      <div class="table-cell cell-feature">4 Personas <i class="fas fa-hand-point-right"></i></div>
+      <div class="table-cell">--</div>
+      <div class="table-cell">--</div>
+      <div class="table-cell cell-feature">5 Personas <i class="fas fa-hand-point-right"></i></div>
+      <div class="table-cell">--</div>
+      <div class="table-cell">--</div>
+      <div class="table-cell cell-feature">6 Personas <i class="fas fa-hand-point-right"></i></div>
+      <div class="table-cell">--</div>
+      <div class="table-cell">--</div>
+    </div>
+
+    <!-- medios de pago -->
+    <div class="table-img">
+      <div><img src="../img/Transferencia.png" alt="Transferencia"></div>
+      <div><img src="../img/MercadoPago.png" alt="Mercado Pago"></div>
+      <div><img src="../img/Efectivo.png" alt="Efectivo"></div>
+      <div><img src="../img/Ahora12.png" alt="Ahora 12"></div>
+    </div>
+  </div>
+
+  <!-- Ubicación -->
+  <div id="ubicacion" class="contacto">
+    <h4 class="contacto-title">
+      <span>¿En dónde estamos?</span>
+    </h4>
+    <h2>Encontranos Acá</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1350.895569189549!2d-56.71871740430749!3d-36.36103939858077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x61dc4972d288013a!2sCaba%C3%B1as%20Playa%20del%20Sol!5e0!3m2!1ses-419!2sar!4v1617822336703!5m2!1ses-419!2sar"
+      width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <!-- información de contacto -->
+  <!-- consigna 6 -->
+  <form id="form" class="row" action="https://www.freecodecamp.com/email-submit">
+    <h4>Envíanos un mensaje</h4>
+    <h6>Si lo desea puede hacernos llegar sus consultas o sugerencias, sírvase contactarnos a través del siguiente
+      formulario o bien puede hacerlo a través de nuestros teléfonos de contacto. Nos pondremos en comunicación con
+      usted en breve.</h6>
+    <table>
+      <tr>
+        <td>
+          <p>Nombre</p>
+          <label class="forName" for="name"></label>
+          <input type="text" name="name" class="validate[required]" placeholder="Nombre">
+        </td>
+        <!-- consigna 7 -->
+        <td>
+          <p>Email</p>
+          <label class="forEmail" for="email"></label>
+          <input id="email" type="email" name="email" class="validate[required, custom[email]]" placeholder="Email">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Entrada</p>
+          <label class="calendar" for="message"></label>
+          <input type="date" name="date-in" class="validate[required]" placeholder="Entrada">
+        </td>
+        <td>
+          <p>Salida</p>
+          <label class="calendar" for="message"></label>
+          <input type="date" name="date-out" id="date-out" class="validate[required]" placeholder="Salida">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Adultos</p>
+          <label class="adults" for="message"></label>
+          <input type="number" name="adults" class="validate[required]" placeholder="Adultos">
+        </td>
+        <td>
+          <p>Niños</p>
+          <label class="childrens" for="message"></label>
+          <input type="number" name="childs" class="validate[required]" placeholder="Niños">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <p>Mensaje</p>
+          <textarea name="message" class="validate[required]" placeholder="Mensaje"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="hidden" name="recaptcha_response" id="recaptchaResponse"
+            value="03AGdBq25yldrqO6k_UjKfZuq3RRO1wP0hcNQpDiLuh6uTUKyDeddGw8GEYwlNzds4yPWlOMFy8EbaN5Gtp3UCMblo2t93eItKCIzLj0hX_feWUZtMJAfGxR0tWGLvG6tZaR0HUc0E7oSlbPEs5caveB96o6dM_xJKqTvm33rHycYOlflVkW3VjxPpx3-_OP_8yEJtPTPM-pN6q1nHnSaa_zBJjKouD_HorUoNJJnJ3cxBFPlFDfb7ZMdf3yf9qoLQ9LMnMPz9P1xocT3JekqUKvUznrAEtXnMj5KsKGtGr9KiM6Gs3o1EwBNMyKpAdZP5fjpC3m_Y8dnxLSQjqyfRNPm_e9y4zwL3QNGxL1ylt_jVnwbpo-H5hDnyFKMOBULe1j0bCotVJbAKYpRJV3BpcMPsuscHC7og0l5e-D-hUCe_S_4E1xqE2ZGfoeH8Kd3SzJgtLdSuHyo9F-hAKDSNrxhEq6zfuHQNoQ">
+          <input id="submit" type="submit" value="Enviar" class="button">
+        </td>
+      </tr>
+    </table>
+    <div class="form-consultas">
+      <h4>Consultas</h4>
+      <p>Calle 62 esq.20 norte, San Clemente del Tuyu</p>
+      <p>+54 2257 58-8700</p>
+      <p>playadelsol_sanclemente@hotmail.com</p>
+    </div>
+  </form>
+  <div class="pie">
+    <p>All Rights Reserved 2021</p>
+  </div>
+
+  <!-- efectos -->
+  <script src="../js/script.js"></script>
+  <!-- CodePen -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
